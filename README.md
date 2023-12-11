@@ -4,8 +4,8 @@
 
 Tractian app é uma aplicação que propõe uma forma prática de visualizar a hierarquia dos assets através de uma estrutura em árvore.
 
-<!-- ## Layout
-<img src="https://github.com/Savionazario/assets/blob/main/images/mobile1.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/mobile2.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/mobile3.jpeg" alt="Descrição da imagem" width="240" height="520"> -->
+## Layout
+<img src="https://github.com/Savionazario/assets/blob/main/images/home page.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/assets.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/filter 1.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/filter 2.jpeg" alt="Descrição da imagem" width="240" height="520"> <img src="https://github.com/Savionazario/assets/blob/main/images/filter 3.jpeg" alt="Descrição da imagem" width="240" height="520">
 
 # Tecnologias utilizadas
 - Flutter (version: 3.10.6)
