@@ -24,7 +24,7 @@ class _TreeWidgetState extends State<TreeWidget> {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: TreeView(
-        indent: 8,
+        indent: 10,
         nodes: widget.treeNodes,
         treeController: _treeController,
       ),

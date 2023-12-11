@@ -73,6 +73,17 @@ class GetTreeUsecase {
           .where((node) => node.parentId == null && node.locationId == null)
           .toList();
 
+      // Ordenando para quem tem filhos vir primeiro
+      tree.sort((a, b) {
+         if ((a.children?.isNotEmpty ?? false) && !(b.children?.isNotEmpty ?? false)) {
+            return -1;
+          } else if (!(a.children?.isNotEmpty ?? false) && (b.children?.isNotEmpty ?? false)) {
+            return 1;
+          } else {
+            return 0;
+          }
+      });
+
       fullTree = tree;
 
       return Right(tree);
@@ -138,11 +149,7 @@ class GetTreeUsecase {
         case "component":
           isComponent = true;
           if (node.sensorType == "energy") {
-            componentIcon = SvgPicture.asset(
-              Assets.rayIcon,
-              colorFilter:
-                  const ColorFilter.mode(Colors.green, BlendMode.srcATop),
-            );
+            componentIcon = SvgPicture.asset(Assets.rayFullIcon);
           } else {
             componentIcon = SvgPicture.asset(Assets.vibrationIcon);
           }
@@ -163,7 +170,7 @@ class GetTreeUsecase {
             icon,
             Padding(
               padding: const EdgeInsets.only(left: 6.0, right: 6.0),
-              child: Text("${node.name}"),
+              child: Text("${node.name}", overflow: TextOverflow.ellipsis),
             ),
             isComponent == true ? componentIcon : const SizedBox.shrink(),
           ],

@@ -55,75 +55,78 @@ class _AssetPageState extends State<AssetPage> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
+          padding: const EdgeInsets.only(top: 16.0,),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: SizedBox(
-                        height: 32,
-                        child: TextFormField(
-                          style: const TextStyle(
-                            fontSize: 14,
-                          ),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: textFieldColor,
-                            contentPadding:
-                                const EdgeInsets.only(bottom: 4.0, left: 8.0),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(4),
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(4),
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(4),
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                            prefixIcon: const Icon(Icons.search, color: grey, size: 18),
-                            hintText: "Buscar Ativo ou Local",
-                            hintStyle: const TextStyle(
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: SizedBox(
+                          height: 32,
+                          child: TextFormField(
+                            style: const TextStyle(
                               fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: grey,
                             ),
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: textFieldColor,
+                              contentPadding:
+                                  const EdgeInsets.only(bottom: 4.0, left: 8.0),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(4),
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                ),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(4),
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(4),
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                ),
+                              ),
+                              prefixIcon: const Icon(Icons.search, color: grey, size: 18),
+                              hintText: "Buscar Ativo ou Local",
+                              hintStyle: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: grey,
+                              ),
+                            ),
+                            onChanged: (value) {
+                              _assetsCubit.loadFilteredTree( seachText: value);
+                            },
                           ),
-                          onChanged: (value) {
-                            _assetsCubit.loadFilteredTree( seachText: value);
-                          },
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 8),
-                    Container(
-                      height: 32,
-                      width: 32,
-                      decoration: BoxDecoration(
-                          color: blue, borderRadius: BorderRadius.circular(3)),
-                      child: const Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 22,
-                      ),
-                      // onPressed: () {},
-                    )
-                  ],
+                      const SizedBox(width: 8),
+                      Container(
+                        height: 32,
+                        width: 32,
+                        decoration: BoxDecoration(
+                            color: blue, borderRadius: BorderRadius.circular(3)),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 22,
+                        ),
+                        // onPressed: () {},
+                      )
+                    ],
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                   child: Row(
                     children: [
                       SizedBox(
