@@ -11,6 +11,9 @@ Tractian app é uma aplicação que propõe uma forma prática de visualizar a h
 - Flutter (version: 3.10.6)
 - Dart (version: 3.0.6)
 
+# Arquitetura utilizada
+- Clean Architecture
+
 # Packages utilizados
 - flutter_svg: ^2.0.9
 - flutter_bloc: ^8.1.3
