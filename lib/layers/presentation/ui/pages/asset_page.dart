@@ -266,7 +266,13 @@ class _AssetPageState extends State<AssetPage> {
                     }
                     state = state as AssetsSucessfulState;
 
-                    return TreeWidget(treeNodes: state.treeNodes);
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: TreeWidget(treeNodes: state.treeNodes),
+                      ),
+                    );
                   },
                 ),
               ],
